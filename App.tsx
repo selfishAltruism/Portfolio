@@ -14,7 +14,7 @@ function ChangePage(props) {
 }
 
 function App() {
-  const [pageChangeState, setPageChangeState] = useState(1); // 원래는 1임. 메인 페이지 확인을 위해 부정으로 만듬 출시전에 바꿔라
+  const [pageChangeState, setPageChangeState] = useState(0);
 
   /* 
   const reducer = (state, action) => {

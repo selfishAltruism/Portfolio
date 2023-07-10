@@ -7,3 +7,24 @@
 
   border-radius: 8px 8px;
 }
+
+#startTime,
+#endTime {
+  position: absolute;
+
+  left: 70px;
+
+  font-size: 30px;
+}
+
+#startTimeLine,
+#endTimeLine {
+  position: absolute;
+
+  left: 40px;
+
+  width: 25px;
+  height: 3.5px;
+
+  border-radius: 1.5px 1.5px;
+}
