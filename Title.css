@@ -4,6 +4,12 @@ body {
 }
 
 #container {
+  position: absolute;
+
+  top: 0px;
+  left: 0px;
+
+  width: 100vw;
   height: 100vh;
 
   background-color: #323232;
@@ -15,7 +21,7 @@ body {
 }
 
 #titleText1 {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 3vw;
 }
 
@@ -28,17 +34,35 @@ body {
   height: 20vh;
 }
 
-#cilckBlock {
+#cilckBlock1 {
   position: absolute;
 
   top: 70vh;
   left: -1vw;
 
   height: 8vh;
-  width: 110vw;
+  width: 120vw;
   background-color: #ffa500;
 
-  transform: rotate(-2deg);
+  transform: rotate(-4deg);
+
+  color: black;
+  font-size: 6vh;
+
+  overflow: hidden;
+}
+
+#cilckBlock2 {
+  position: absolute;
+
+  top: -1vh;
+  left: -1vw;
+
+  height: 8vh;
+  width: 120vw;
+  background-color: #ffa500;
+
+  transform: rotate(5deg);
 
   color: black;
   font-size: 6vh;

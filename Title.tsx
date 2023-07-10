@@ -13,14 +13,21 @@ function Title() {
   return (
     <>
       <div id="container">
-        <div id="titleText1">강민규의</div>
-        <div id="titleText2">컴퓨터 공학 일대기</div>
+        <div id="titleText1">Kang Min Kyu</div>
+        <div id="titleText2">Development Portfolio</div>
         <div id="block"></div>
       </div>
-      <div id="cilckBlock">
+
+      <div id="cilckBlock1">
         Click anywhere Click anywhere Click anywhere Click anywhere Click
         anywhere Click anywhere Click anywhere
       </div>
+
+      <div id="cilckBlock2">
+        Click anywhere Click anywhere Click anywhere Click anywhere Click
+        anywhere Click anywhere Click anywhere
+      </div>
+
       <div id="gitLink">
         <p>Made by https://github.com/selfishAltruism</p>
       </div>
