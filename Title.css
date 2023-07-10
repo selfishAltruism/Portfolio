@@ -37,9 +37,6 @@ body {
 #cilckBlock1 {
   position: absolute;
 
-  top: 70vh;
-  left: -1vw;
-
   height: 8vh;
   width: 120vw;
   background-color: #ffa500;
@@ -54,9 +51,6 @@ body {
 
 #cilckBlock2 {
   position: absolute;
-
-  top: -1vh;
-  left: -1vw;
 
   height: 8vh;
   width: 120vw;
