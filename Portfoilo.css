@@ -2,21 +2,28 @@ body {
   box-sizing: border-box;
   margin: 0px;
 }
-/* 
-#timeline {
-  position: absolute;
 
-  top: 40px;
-  left: 40px;
+#portfolioTitle {
+  -webkit-touch-callout: none;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
 
-  width: 13px;
-  height: 3000px;
+  position: fixed;
+  z-index: 1;
 
-  background-color: black;
+  top: 0px;
+  left: 0px;
 
-  border-radius: 8px 8px;
+  width: 100vw;
+  height: 50px;
+
+  background-color: #323232;
+
+  color: white;
 }
- */
+
 #gitLink2 {
   position: fixed;
 
