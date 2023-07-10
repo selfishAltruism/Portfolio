@@ -1,0 +1,36 @@
+body {
+  box-sizing: border-box;
+  margin: 0px;
+}
+/* 
+#timeline {
+  position: absolute;
+
+  top: 40px;
+  left: 40px;
+
+  width: 13px;
+  height: 3000px;
+
+  background-color: black;
+
+  border-radius: 8px 8px;
+}
+ */
+#gitLink {
+  position: fixed;
+
+  top: 50vh;
+  left: 73vw;
+
+  width: 100vh;
+  height: 0vh;
+
+  color: #828282;
+
+  transform: rotate(-90deg);
+}
+
+p {
+  text-align: center;
+}
