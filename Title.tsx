@@ -21,6 +21,11 @@ function Title() {
     left: cilckBlock2LeftState,
   };
 
+  const [containerOpacityState, setContainerOpacityState] = useState(1.0);
+  const containerStyle = {
+    opacity: `${containerOpacityState}`,
+  };
+
   const mainClickHandler = () => {
     const ele1 = document.getElementById("cilckBlock1");
     const ele1PositionTop = window.scrollY + ele1.getBoundingClientRect().top;
@@ -34,27 +39,32 @@ function Title() {
     const ele2PositionLeft = window.scrollX + ele2.getBoundingClientRect().left;
     let cilckBlock2LeftPosition = ele2PositionLeft;
 
+    let containerOpacity = 1.0;
+
     const interval = setInterval(() => {
-      cilckBlock1TopPosition = cilckBlock1TopPosition - 0.2;
-      cilckBlock1LeftPosition = cilckBlock1LeftPosition + 3.2;
+      cilckBlock1TopPosition = cilckBlock1TopPosition - 1;
+      cilckBlock1LeftPosition = cilckBlock1LeftPosition + 16;
       setCilckBlock1TopState(`${cilckBlock1TopPosition}px`);
       setCilckBlock1LeftState(`${cilckBlock1LeftPosition}px`);
 
-      cilckBlock2TopPosition = cilckBlock2TopPosition - 0.2;
-      cilckBlock2LeftPosition = cilckBlock2LeftPosition - 2.8;
+      cilckBlock2TopPosition = cilckBlock2TopPosition - 1;
+      cilckBlock2LeftPosition = cilckBlock2LeftPosition - 14;
       setCilckBlock2TopState(`${cilckBlock2TopPosition}px`);
       setCilckBlock2LeftState(`${cilckBlock2LeftPosition}px`);
-    }, 1);
+
+      containerOpacity = containerOpacity - 0.01;
+      setContainerOpacityState(containerOpacity);
+    }, 16);
 
     setTimeout(() => {
       clearInterval(interval);
       setPageChangeState(1);
-    }, 3000);
+    }, 2200);
   };
 
   return (
     <div onClick={mainClickHandler}>
-      <div id="container">
+      <div id="container" style={containerStyle}>
         <div id="titleText1">Kang Min Kyu</div>
         <div id="titleText2">Development Portfolio</div>
         <div id="block"></div>
@@ -62,12 +72,12 @@ function Title() {
 
       <div id="cilckBlock1" style={cilckBlock1Style}>
         Click anywhere Click anywhere Click anywhere Click anywhere Click
-        anywhere Click anywhere Click anywhere
+        anywhere Click anywhere Click anywhere Click anywhere
       </div>
 
       <div id="cilckBlock2" style={cilckBlock2Style}>
         Click anywhere Click anywhere Click anywhere Click anywhere Click
-        anywhere Click anywhere Click anywhere
+        anywhere Click anywhere Click anywhere Click anywhere
       </div>
 
       <div id="gitLink">
