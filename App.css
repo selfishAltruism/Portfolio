@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "NotoSerifKR-Regular";
+  src: url(../fonts/NotoSerifKR-Regular.otf);
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-Regular";
+  src: url(../fonts/PlayfairDisplay-Regular.ttf);
+}
+
+* {
+  font-family: "NotoSerifKR-Regular", "PlayfairDisplay-Regular";
+}
