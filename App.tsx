@@ -4,9 +4,18 @@ import { useState, createContext, useReducer } from "react";
 import "./App.css";
 
 import Title from "./Title";
+import Portfolio from "./Portfolio";
+
 export const context = createContext(undefined);
 
+function ChangePage(props) {
+  if (props.pageChangeState == 0) return <Title />;
+  return <Portfolio />;
+}
+
 function App() {
+  const [pageChangeState, setPageChangeState] = useState(0);
+
   /* 
   const reducer = (state, action) => {
     if (action == "swap") {
@@ -20,8 +29,8 @@ function App() {
 
   return (
     <>
-      <context.Provider value={{}}>
-        <Title />
+      <context.Provider value={{ setPageChangeState }}>
+        <ChangePage pageChangeState={pageChangeState} />
       </context.Provider>
     </>
   );

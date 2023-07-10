@@ -1,14 +1,11 @@
 import * as React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { context } from "./App";
 
 import "./Title.css";
 
 function Title() {
-  /*   const { contextState, contsextSetState, reducerState, reducerSetState } =
-    useContext(context);
-
-  contsextSetState("Yes"); */
+  const { setPageChangeState } = useContext(context);
 
   const [cilckBlock1TopState, setCilckBlock1TopState] = useState("70vh");
   const [cilckBlock1LeftState, setCilckBlock1LeftState] = useState("-1vw");
@@ -51,6 +48,7 @@ function Title() {
 
     setTimeout(() => {
       clearInterval(interval);
+      setPageChangeState(1);
     }, 3000);
   };
 
