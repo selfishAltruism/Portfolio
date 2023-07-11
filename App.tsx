@@ -14,7 +14,7 @@ function ChangePage(props) {
 }
 
 function App() {
-  const [pageChangeState, setPageChangeState] = useState(1); //// 원래 000
+  const [pageChangeState, setPageChangeState] = useState(0);
 
   return (
     <>

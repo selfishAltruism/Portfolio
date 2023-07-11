@@ -22,10 +22,10 @@ function Portfolio() {
   const TimePointDetailLength = {
     university: 200,
     studentCouncil: 460,
-    it_da: 500,
+    it_da: 590,
     militaryEnlistment: 400,
     shipList: 200,
-    portfolio: 400,
+    portfolio: 200,
   };
 
   const [universityDetailState, setUniversityDetailState] = useState(0);
@@ -86,7 +86,7 @@ function Portfolio() {
           barColor="#389561"
           barTop={150}
           barLength={97}
-          startTime="2021.01.17 ~ 2023.06.31"
+          startTime="2021.01.17 ~ 2023.06.15"
           title="대한민국 군대 입대"
           setState={setMilitaryEnlistmentDetailState}
         />
@@ -97,7 +97,7 @@ function Portfolio() {
           barColor="#4646CD"
           barTop={200}
           barLength={43}
-          startTime="2023.02.21~2023.03.01"
+          startTime="2023.02.21~2023.02.25"
           title="Ship List Program Development"
           setState={setShipListDetailState}
         />
@@ -121,13 +121,18 @@ function Portfolio() {
             setPageChangeState(0);
           }}
         >
-          <p>Kang Min Kyu's Development Portfolio</p>
+          <p>Kang Min Kyu's Portfolio</p>
         </div>
 
         <div id="gitLink2">
           <p>Made by https://github.com/selfishAltruism</p>
         </div>
       </ditailContext.Provider>
+
+      <span id="toBeContinued">
+        To Be Continued.. To Be Continued.. To Be Continued.. To Be Continued..
+        To Be Continued.. To Be Continued..
+      </span>
     </>
   );
 }

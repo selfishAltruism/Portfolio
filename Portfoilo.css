@@ -41,3 +41,22 @@ body {
 p {
   text-align: center;
 }
+
+#toBeContinued {
+  position: absolute;
+  z-index: 20;
+
+  height: 8vh;
+  width: 120vw;
+  background-color: #ffa500;
+
+  top: 730px;
+  left: -20px;
+
+  transform: rotate(2deg);
+
+  color: black;
+  font-size: 6vh;
+
+  overflow: hidden;
+}
