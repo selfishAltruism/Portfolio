@@ -93,10 +93,11 @@ function Timepoint(props: Props) {
         setLoadingBlockState(`${LoadingBlockWidth}vw`);
       }, 20);
 
+      props.setState(1);
+
       setTimeout(() => {
         clearInterval(interval);
         setLoadingBlockState("90vw");
-        props.setState(1);
       }, 600);
     } else {
       setIoIosAddCircleState("rotate(0deg)");
@@ -107,10 +108,11 @@ function Timepoint(props: Props) {
         setLoadingBlockState(`${LoadingBlockWidth}vw`);
       }, 20);
 
+      props.setState(0);
+
       setTimeout(() => {
         clearInterval(interval);
         setLoadingBlockState("0vw");
-        props.setState(0);
       }, 600);
     }
   };
