@@ -14,22 +14,15 @@ function ChangePage(props) {
 }
 
 function App() {
-  const [pageChangeState, setPageChangeState] = useState(0);
-
-  /* 
-  const reducer = (state, action) => {
-    if (action == "swap") {
-      return !state;
-    } else if (action == "keep") {
-      return state;
-    }
-  };
-
-  const [reducerState, reducerSetState] = useReducer(reducer, true);*/
+  const [pageChangeState, setPageChangeState] = useState(0); // 원래는 0임. 메인 페이지 확인을 위해 부정으로 만듬 출시전에 바꿔라
 
   return (
     <>
-      <context.Provider value={{ setPageChangeState }}>
+      <context.Provider
+        value={{
+          setPageChangeState,
+        }}
+      >
         <ChangePage pageChangeState={pageChangeState} />
         <Portfolio />
       </context.Provider>

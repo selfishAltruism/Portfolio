@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useState, useEffect, useRef, useContext } from "react";
-import { context } from "./App";
 
 import "./Timepoint.css";
 
@@ -12,6 +11,7 @@ type Props = {
   barLength: number;
   startTime: string;
   title: string;
+  setState;
 };
 
 const timebarStyle = {
@@ -75,10 +75,10 @@ function Timepoint(props: Props) {
   const detailBlockClick = () => {
     if (fcCollapseState == "rotate(0deg)") {
       setfcCollapseState("rotate(180deg)");
-      //세부사항이 나오는 파트
+      props.setState(true);
     } else {
       setfcCollapseState("rotate(0deg)");
-      //세부사항이 들어가는 파트
+      props.setState(false);
     }
   };
 
