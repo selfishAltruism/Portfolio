@@ -1,6 +1,6 @@
-#universityDetailBlock {
+#IT_DADetailBlock {
   position: absolute;
-  z-index: 90;
+  z-index: 70; /* 10씩 줄이기 */
 
   right: 4vw;
 

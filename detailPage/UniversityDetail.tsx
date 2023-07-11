@@ -9,25 +9,26 @@ type Props = {
   barTop: number;
 };
 
-const detailBlockStyle = {
-  background: "black",
-
-  top: "101px",
-
-  height: "100px",
-};
-
 function UniversityDetail(props: Props) {
   const { universityDetailState, TimePointDetailLength } =
     useContext(ditailContext);
 
-  detailBlockStyle.top = `${props.barTop + 101}px`;
-  detailBlockStyle.height = `${TimePointDetailLength.university}px`;
+  const universityDetailBlockStyle = {
+    background: "black",
+    top: "101px",
+    height: "100px",
+  };
+
+  universityDetailBlockStyle.top = `${props.barTop + 101}px`;
+  universityDetailBlockStyle.height = `${TimePointDetailLength.university}px`;
+  universityDetailBlockStyle.background = `${props.barColor}`;
 
   if (!universityDetailState) {
     return <></>;
   } else {
-    return <div id="detailBlock" style={detailBlockStyle}></div>;
+    return (
+      <div id="universityDetailBlock" style={universityDetailBlockStyle}></div>
+    );
   }
 }
 

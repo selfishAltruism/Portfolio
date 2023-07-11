@@ -1,6 +1,6 @@
-#universityDetailBlock {
+#studentCouncilDetailBlock {
   position: absolute;
-  z-index: 90;
+  z-index: 80;
 
   right: 4vw;
 

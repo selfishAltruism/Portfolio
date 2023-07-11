@@ -83,6 +83,8 @@ function Title() {
       <div id="gitLink">
         <p>Made by https://github.com/selfishAltruism</p>
       </div>
+
+      <div id="colorBlock"></div>
     </div>
   );
 }

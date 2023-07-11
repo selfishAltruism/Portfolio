@@ -5,7 +5,7 @@ body {
 
 #container {
   position: absolute;
-  z-index: 10;
+  z-index: 100;
 
   top: 0px;
   left: 0px;
@@ -21,29 +21,42 @@ body {
   align-items: center;
 }
 
+#colorBlock {
+  position: absolute;
+  z-index: 100;
+
+  top: 100vh;
+  left: 0px;
+
+  width: 100vw;
+  height: 310px;
+
+  background-color: #323232;
+}
+
 #titleText1 {
-  z-index: 11;
+  z-index: 101;
 
   color: rgb(255, 255, 255);
   font-size: 3vw;
 }
 
 #titleText2 {
-  z-index: 11;
+  z-index: 101;
 
   color: white;
   font-size: 6vw;
 }
 
 #block {
-  z-index: 11;
+  z-index: 101;
 
   height: 20vh;
 }
 
 #cilckBlock1 {
   position: absolute;
-  z-index: 12;
+  z-index: 102;
 
   height: 8vh;
   width: 120vw;
@@ -59,7 +72,7 @@ body {
 
 #cilckBlock2 {
   position: absolute;
-  z-index: 12;
+  z-index: 102;
 
   height: 8vh;
   width: 120vw;
@@ -75,7 +88,7 @@ body {
 
 #gitLink {
   position: absolute;
-  z-index: 12;
+  z-index: 102;
 
   bottom: 0px;
 

@@ -1,42 +1,54 @@
 import * as React from "react";
-import { useState, createContext, useContext } from "react";
+import { useState, createContext, useContext, useReducer } from "react";
 import { context } from "./App";
 
 export const ditailContext = createContext(undefined);
 
 import Timepoint from "./Timepoint";
 import UniversityDetail from "./detailPage/UniversityDetail";
+import StudentCouncilDetail from "./detailPage/StudentCouncilDetail";
+import IT_DADetail from "./detailPage/IT_DADetail";
+import MilitaryEnlistmentDetail from "./detailPage/MilitaryEnlistmentDetail";
+import ShipListDetail from "./detailPage/ShipListDetail";
+import PortfolioDetail from "./detailPage/PortfolioDetail";
 
 import "./Portfoilo.css";
 
-export const MAXLENGTH_TIMEBAR = 3000;
+export const MAXLENGTH_TIMEBAR = 750;
 
 function Portfolio() {
   const { setPageChangeState } = useContext(context);
 
   const TimePointDetailLength = {
-    university: 700,
+    university: 200,
+    studentCouncil: 300,
+    it_da: 300,
+    militaryEnlistment: 100,
+    shipList: 200,
+    portfolio: 400,
   };
 
-  const [universityDetailState, setUniversityDetailState] = useState(false);
+  const [universityDetailState, setUniversityDetailState] = useState(0);
+  const [studentCouncilDetailState, setStudentCouncilDetailState] = useState(0);
+  const [it_daDetailState, setIt_daDetailState] = useState(0);
+  const [militaryEnlistmentDetailState, setMilitaryEnlistmentDetailState] =
+    useState(0);
+  const [shipListDetailState, setShipListDetailState] = useState(0);
+  const [portfolioDetailState, setPortfolioDetailState] = useState(0);
 
   return (
     <>
       <ditailContext.Provider
         value={{
-          universityDetailState,
           TimePointDetailLength,
+          universityDetailState,
+          studentCouncilDetailState,
+          it_daDetailState,
+          militaryEnlistmentDetailState,
+          shipListDetailState,
+          portfolioDetailState,
         }}
       >
-        <div
-          id="portfolioTitle"
-          onClick={() => {
-            setPageChangeState(0);
-          }}
-        >
-          <p>Kang Min Kyu's Development Portfolio</p>
-        </div>
-
         <Timepoint
           barColor="dodgerblue"
           barTop={0}
@@ -48,24 +60,70 @@ function Portfolio() {
 
         <UniversityDetail barColor="dodgerblue" barTop={0} />
 
-        {/* <Timepoint
+        <Timepoint
           barColor="rgb(255, 166, 0)"
-          barTop={100}
-          barLength={500}
+          barTop={50}
+          barLength={97}
           startTime="2021.01.01 ~ 2021.12.31"
           title="소프트웨어학부 학생회 교육부장 활동"
-          detailName="studentCouncil"
+          setState={setStudentCouncilDetailState}
         />
+
+        <StudentCouncilDetail barColor="rgb(255, 166, 0)" barTop={50} />
+
+        <Timepoint
+          barColor="#0A6E0A"
+          barTop={100}
+          barLength={43}
+          startTime="2021.06.23 ~ 2021.12.20"
+          title="IT_DA Project"
+          setState={setIt_daDetailState}
+        />
+
+        <IT_DADetail barColor="#0A6E0A" barTop={100} />
+
+        <Timepoint
+          barColor="#389561"
+          barTop={150}
+          barLength={97}
+          startTime="2021.01.17 ~ 2023.06.31"
+          title="대한민국 군대 입대"
+          setState={setMilitaryEnlistmentDetailState}
+        />
+
+        <MilitaryEnlistmentDetail barColor="#389561" barTop={150} />
+
+        <Timepoint
+          barColor="#0000CD"
+          barTop={200}
+          barLength={43}
+          startTime="2023.02.21~2023.03.01"
+          title="Ship List Program Development"
+          setState={setShipListDetailState}
+        />
+
+        <ShipListDetail barColor="#0000CD" barTop={200} />
 
         <Timepoint
           barColor="#323232"
-          barTop={2000}
-          barLength={300}
-          startTime="2021.07.10 ~ 2021.12.12"
-          title="Develop Portfoilo wed page"
-          detailName="portfoilo"
+          barTop={250}
+          barLength={50}
+          startTime="2021.07.10 ~ 2021.07.11"
+          title="Portfoilo wed page Development"
+          setState={setPortfolioDetailState}
         />
- */}
+
+        <PortfolioDetail barColor="#323232" barTop={250} />
+
+        <div
+          id="portfolioTitle"
+          onClick={() => {
+            setPageChangeState(0);
+          }}
+        >
+          <p>Kang Min Kyu's Development Portfolio</p>
+        </div>
+
         <div id="gitLink2">
           <p>Made by https://github.com/selfishAltruism</p>
         </div>
