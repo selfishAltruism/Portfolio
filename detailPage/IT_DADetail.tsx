@@ -25,7 +25,18 @@ function IT_DADetail(props: Props) {
   if (!it_daDetailState) {
     return <></>;
   } else {
-    return <div id="IT_DADetailBlock" style={IT_DADetailBlockStyle}></div>;
+    return (
+      <div id="IT_DADetailBlock" style={IT_DADetailBlockStyle}>
+        <iframe
+          id="it_daYouTube"
+          width="460"
+          height="250"
+          src="https://www.youtube.com/embed/A4qq8sp7lDs"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        ></iframe>
+      </div>
+    );
   }
 }
 

@@ -21,9 +21,9 @@ function Portfolio() {
 
   const TimePointDetailLength = {
     university: 200,
-    studentCouncil: 300,
-    it_da: 300,
-    militaryEnlistment: 100,
+    studentCouncil: 460,
+    it_da: 500,
+    militaryEnlistment: 400,
     shipList: 200,
     portfolio: 400,
   };
@@ -61,7 +61,7 @@ function Portfolio() {
         <UniversityDetail barColor="dodgerblue" barTop={0} />
 
         <Timepoint
-          barColor="rgb(255, 166, 0)"
+          barColor="#0AC9FF"
           barTop={50}
           barLength={97}
           startTime="2021.01.01 ~ 2021.12.31"
@@ -69,7 +69,7 @@ function Portfolio() {
           setState={setStudentCouncilDetailState}
         />
 
-        <StudentCouncilDetail barColor="rgb(255, 166, 0)" barTop={50} />
+        <StudentCouncilDetail barColor="#0AC9FF" barTop={50} />
 
         <Timepoint
           barColor="#0A6E0A"
