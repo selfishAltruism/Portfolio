@@ -26,6 +26,11 @@ function Title() {
     opacity: `${containerOpacityState}`,
   };
 
+  const [colorBlockOpacityState, setColorBlockOpacityState] = useState(1.0);
+  const colorBlockStyle = {
+    opacity: `${colorBlockOpacityState}`,
+  };
+
   const mainClickHandler = () => {
     const ele1 = document.getElementById("cilckBlock1");
     const ele1PositionTop = window.scrollY + ele1.getBoundingClientRect().top;
@@ -39,7 +44,7 @@ function Title() {
     const ele2PositionLeft = window.scrollX + ele2.getBoundingClientRect().left;
     let cilckBlock2LeftPosition = ele2PositionLeft;
 
-    let containerOpacity = 1.0;
+    let Opacity = 1.0;
 
     const interval = setInterval(() => {
       cilckBlock1TopPosition = cilckBlock1TopPosition - 1;
@@ -52,8 +57,9 @@ function Title() {
       setCilckBlock2TopState(`${cilckBlock2TopPosition}px`);
       setCilckBlock2LeftState(`${cilckBlock2LeftPosition}px`);
 
-      containerOpacity = containerOpacity - 0.01;
-      setContainerOpacityState(containerOpacity);
+      Opacity = Opacity - 0.01;
+      setContainerOpacityState(Opacity);
+      setColorBlockOpacityState(Opacity);
     }, 16);
 
     setTimeout(() => {
@@ -66,7 +72,7 @@ function Title() {
     <div onClick={mainClickHandler}>
       <div id="container" style={containerStyle}>
         <div id="titleText1">Kang Min Kyu</div>
-        <div id="titleText2">Development Portfolio</div>
+        <div id="titleText2">Portfolio</div>
         <div id="block"></div>
       </div>
 
@@ -84,7 +90,7 @@ function Title() {
         <p>Made by https://github.com/selfishAltruism</p>
       </div>
 
-      <div id="colorBlock"></div>
+      <div id="colorBlock" style={colorBlockStyle}></div>
     </div>
   );
 }

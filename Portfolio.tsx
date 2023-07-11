@@ -94,7 +94,7 @@ function Portfolio() {
         <MilitaryEnlistmentDetail barColor="#389561" barTop={150} />
 
         <Timepoint
-          barColor="#0000CD"
+          barColor="#4646CD"
           barTop={200}
           barLength={43}
           startTime="2023.02.21~2023.03.01"
@@ -102,7 +102,7 @@ function Portfolio() {
           setState={setShipListDetailState}
         />
 
-        <ShipListDetail barColor="#0000CD" barTop={200} />
+        <ShipListDetail barColor="#4646CD" barTop={200} />
 
         <Timepoint
           barColor="#323232"
