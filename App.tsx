@@ -10,7 +10,7 @@ export const context = createContext(undefined);
 
 function ChangePage(props) {
   if (props.pageChangeState == 0) return <Title />;
-  return <Portfolio />;
+  return <></>;
 }
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
     <>
       <context.Provider value={{ setPageChangeState }}>
         <ChangePage pageChangeState={pageChangeState} />
+        <Portfolio />
       </context.Provider>
     </>
   );

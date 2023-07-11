@@ -5,6 +5,7 @@ body {
 
 #container {
   position: absolute;
+  z-index: 10;
 
   top: 0px;
   left: 0px;
@@ -21,21 +22,28 @@ body {
 }
 
 #titleText1 {
+  z-index: 11;
+
   color: rgb(255, 255, 255);
   font-size: 3vw;
 }
 
 #titleText2 {
+  z-index: 11;
+
   color: white;
   font-size: 6vw;
 }
 
 #block {
+  z-index: 11;
+
   height: 20vh;
 }
 
 #cilckBlock1 {
   position: absolute;
+  z-index: 12;
 
   height: 8vh;
   width: 120vw;
@@ -51,6 +59,7 @@ body {
 
 #cilckBlock2 {
   position: absolute;
+  z-index: 12;
 
   height: 8vh;
   width: 120vw;
@@ -66,6 +75,7 @@ body {
 
 #gitLink {
   position: absolute;
+  z-index: 12;
 
   bottom: 0px;
 
